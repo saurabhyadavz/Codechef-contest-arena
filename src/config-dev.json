@@ -1,0 +1,11 @@
+{
+  "urlBase": "https://api.codechef.com",
+  "urlAuthorize": "/oauth/authorize",
+  "urlToken": "/oauth/token",
+  "urlRedirect": "http://localhost:3000/auth/codechef/callback",
+  "clientID": "561434da421fffbcb13985f1719adb6a",
+  "clientSecret": "a167dca60fc4cee27270f4da82703816",
+  "urlUser": "/users/me",
+  "urlMain": "https://www.codechef.com",
+  "urlBackend": "http://localhost:3333"
+}

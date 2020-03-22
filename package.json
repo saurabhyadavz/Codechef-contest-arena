@@ -1,0 +1,31 @@
+{
+  "name": "codechef-contest-arena",
+  "version": "0.1.0",
+  "homepage": "http://149.129.136.228",
+  "private": true,
+  "dependencies": {
+    "async": "^2.6.1",
+    "bootstrap": "^4.1.1",
+    "moment": "^2.22.2",
+    "node-fetch": "^2.2.0",
+    "page": "^1.10.1",
+    "rc-pagination": "^1.17.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-scripts": "1.1.5",
+    "react-toastify": "^4.4.0",
+    "reactstrap": "^6.4.0"
+  },
+  "scripts": {
+    "start": "export REACT_APP_ENV='dev' && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0"
+  }
+}
