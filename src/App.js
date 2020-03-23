@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-
-
 import Utils from './components/utils'
 import {Alert,Badge} from 'reactstrap'
+import './App.css'
+
+import AutoComplete from './components/AutoComplete'
+
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -17,7 +20,7 @@ class App extends Component {
     const self = this
     Utils.checkLocalStorage(function (err) {
       if (err) {
-        self.setState({ localStorageSupported: false })
+        this.setState({ localStorageSupported: false })
       }
     })
   }
@@ -32,9 +35,19 @@ class App extends Component {
     </div>
 
     if (Utils.isLogged()) {
-      home = <div>
-        Welcome home
-      </div >
+      home =
+      <div className="App">
+
+        <div className="App-Component">
+
+          <div className="App-Component">
+            
+              <AutoComplete />
+          </div>
+
+      </div>
+      </div>
+
     }
 
     var errorPage = <div> <h2> LocalStorage not supported! </h2> </div>

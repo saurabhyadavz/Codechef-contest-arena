@@ -2,11 +2,8 @@
   text-align: center;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
+.App-Component {
+  margin:150px auto 0 auto;
+  width: 600px;
 
-.App-intro {
-  font-size: large;
 }
-
