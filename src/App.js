@@ -41,11 +41,11 @@ class App extends Component {
         <div className="App-Component">
 
           <div className="App-Component">
-            
+
               <AutoComplete />
           </div>
 
-      </div>
+        </div>
       </div>
 
     }

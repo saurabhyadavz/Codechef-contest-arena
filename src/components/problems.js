@@ -12,7 +12,9 @@ class Problems extends Component {
     this.state = {
       contestCode: this.props.contestCode,
       contestName: '',
-      problems: []
+      problems: [],
+      problemName:''
+
     }
   }
 
@@ -27,6 +29,8 @@ class Problems extends Component {
         window.alert(res)
       }
     })
+    
+
   }
 
   render () {
@@ -70,6 +74,7 @@ class Problems extends Component {
 
     return (
       <div>
+        <p style={{te}}>{this.state.contestName}</p>
         {problemsView}
       </div>
     )

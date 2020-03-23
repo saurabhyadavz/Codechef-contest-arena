@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './AutoComplete.css'
-
+import Utils from './utils'
 export default class AutoComplete extends Component{
   constructor(props){
     super(props);
@@ -50,6 +50,7 @@ export default class AutoComplete extends Component{
   }
 
 
+
   render() {
     const {text}=this.state;
     return (
@@ -60,8 +61,8 @@ export default class AutoComplete extends Component{
                 {this.renderSuggestion()}
         </div>
         <div>
-        
-          <button  type="button" style={{marginTop:'40px'}} onClick={() => console.log({text})}>Submit</button>
+
+          <button  type="button" style={{marginTop:'40px'}} onClick={() => { Utils.moveTo(`/problems/${text}`) }}>Submit</button>
 
         </div>
       </div>

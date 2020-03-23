@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import Page from 'page'
-
+import Problems from './components/problems'
 import Utils from './components/utils'
 
 import Header from './components/header'
@@ -30,6 +30,12 @@ function startOAuth2 (context) {
     }
   })
 }
+function startProblemsView (context) {
+  var code = context.params.code
+  ReactDOM.render(<Header />, document.getElementById('header'))
+  ReactDOM.render(<Problems contestCode={code} />,document.getElementById('root')
+  )
+}
 
 function checkLogin (cxt, next) {
   if (Utils.isLogged()) next()
@@ -38,7 +44,7 @@ function checkLogin (cxt, next) {
 
 Page('/', startHomeView)
 Page('/auth/codechef/callback', startOAuth2)
-
+Page('/problems/:code', startProblemsView)
 Page.start()
 
 registerServiceWorker()
