@@ -59,6 +59,7 @@ class Header extends Component {
       : <p style={{color:'red'}}> Hey Anonymous </p>
 
     var header = <Nav>
+      <NavLink href='/'>Home</NavLink>
       <NavLink href='#'>{user}</NavLink>
           {loginView}
 

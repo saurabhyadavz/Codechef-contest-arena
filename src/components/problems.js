@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Table } from 'reactstrap'
-
+import Countdown from "react-countdown";
 import Utils from './utils'
+
 
 const url = Utils.config.urlBase
 const urlProblem = Utils.config.urlMain
@@ -13,8 +14,10 @@ class Problems extends Component {
       contestCode: this.props.contestCode,
       contestName: '',
       problems: [],
-      problemName:''
-
+      problemName:'',
+      ContestStartDate:null,
+      ContestEndDate:null,
+      ContestDuration:9000,
     }
   }
 
@@ -24,16 +27,50 @@ class Problems extends Component {
     const self = this
     Utils.getSecureRequest(contestUrl, token, function (err, res) {
       if (!err) {
-        self.setState({ contestName: res.name, contestCode: res.code, problems: res.problemsList })
+        const start= new Date(res.startDate).getTime();
+
+        const end=new Date(res.endDate).getTime();
+
+        const duration=end-start;
+
+
+
+        self.setState({ contestName: res.name, contestCode: res.code, problems: res.problemsList, ContestDuration: duration})
+
       } else {
         window.alert(res)
       }
     })
-    
+
 
   }
 
+
   render () {
+    const Completionist = () => <span>You are good to go!</span>;
+
+
+    const renderer = ({ hours, minutes, seconds, completed }) => {
+      if (completed) {
+        window.location='/';
+
+      } else {
+
+        return (
+            <div style={{marginTop:'50px',textAlign:'center',fontSize:'30px',fontFamily: 'lucida grande'}}>
+                <div>
+                  Contest Ends in
+                </div>
+                <div>
+                    {hours}:{minutes}:{seconds}
+                </div>
+
+            </div>
+        );
+      }
+    };
+
+
     var items = null
     if (this.state.problems && this.state.problems.length > 0) {
       items = this.state.problems.map(function (i) {
@@ -73,9 +110,14 @@ class Problems extends Component {
     </div>
 
     return (
+
       <div>
-        <p style={{te}}>{this.state.contestName}</p>
-        {problemsView}
+        <div>
+          <p style={{textSize:'30px'}}>{this.state.contestName}</p>
+            {problemsView}
+            <Countdown date={Date.now() + this.state.ContestDuration} renderer={renderer} />
+        </div>
+
       </div>
     )
   }

@@ -14,6 +14,8 @@ export default class AutoComplete extends Component{
     this.state={
       suggestions:[],
       text:'',
+      
+
     };
   }
 
@@ -52,6 +54,8 @@ export default class AutoComplete extends Component{
 
 
   render() {
+
+
     const {text}=this.state;
     return (
       <div>
