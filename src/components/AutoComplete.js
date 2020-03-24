@@ -22,15 +22,27 @@ componentDidMount(){
 
   Utils.getSecureRequest(url, token, function (err, data){
     if (!err) {
-      data = data.contestList
-      for (var i = 0; i < data.length; ++i) {
-        items.push(data[i].code)
-        mappeditems.set(data[i].name,data[i].code);
-        mappeditems.set(data[i].code,data[i].code);
+        data = data.contestList
+        var keys = new Set()
+
+        for (var i = 0; i < data.length; ++i) {
+          keys.add(data[i].code)
+          keys.add(data[i].name)
+        }
+
+        for (var j = 0; j < data.length; ++j) {
+          if (!keys.has(data[j].code + 'A') && !keys.has(data[j].code + 'B')) {
+              items.push(data[j].code);
+              mappeditems.set(data[j].code,data[j].code);
+
+          }
+        }
+        for(var i = 0; i < data.length; ++i) {
+          items.push(data[i].name);
+          mappeditems.set(data[i].name,data[i].code);
+
       }
-      for (var i = 0; i < data.length; ++i) {
-        items.push(data[i].name)
-      }
+
     }
 
   })
