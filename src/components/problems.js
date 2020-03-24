@@ -1,5 +1,16 @@
 import React, { Component } from 'react'
-import { Table } from 'reactstrap'
+import {
+  Table,
+  Nav,
+  NavItem,
+  NavLink,
+  TabContent,
+  TabPane,
+  Row,
+  Col
+} from 'reactstrap'
+import classnames from 'classnames'
+import async from 'async'
 import Countdown from "react-countdown";
 import Utils from './utils'
 
@@ -22,7 +33,7 @@ class Problems extends Component {
   }
 
   componentDidMount () {
-    const contestUrl = url + '/contests/' + this.state.contestCode
+    const contestUrl = url + '/contests/' + this.state.contestCode+'?sortBy=successfulSubmissions&sortOrder=desc'
     var token = window.localStorage.access_token
     const self = this
     Utils.getSecureRequest(contestUrl, token, function (err, res) {
@@ -57,14 +68,13 @@ class Problems extends Component {
       } else {
 
         return (
-            <div style={{marginTop:'50px',textAlign:'center',fontSize:'30px',fontFamily: 'lucida grande'}}>
+            <div style={{fontSize:'25px'}}>
                 <div>
                   Contest Ends in
                 </div>
                 <div>
-                    {hours}:{minutes}:{seconds}
+                    <span>{hours}:{minutes}:{seconds}</span>
                 </div>
-
             </div>
         );
       }
@@ -91,7 +101,7 @@ class Problems extends Component {
       })
     }
 
-    var problemsView = <div style={{ justifyContent: 'center', marginTop: 20 }}>
+    var problemsView = <div style={{ justifyContent: 'center', marginTop: 50 }}>
       <div>
         <Table bordered>
           <thead>
@@ -112,13 +122,28 @@ class Problems extends Component {
     return (
 
       <div>
-        <div>
-          <p style={{textSize:'30px'}}>{this.state.contestName}</p>
+
+        <p style={{textAlign: 'center', justifyContent: 'center',fontSize: 20,marginTop:60,fontWeight:50}}>{this.state.contestName}</p>
+        <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center' }}>
+
+
+            <div style={{ width: '70%' }}>
             {problemsView}
-            <Countdown date={Date.now() + this.state.ContestDuration} renderer={renderer} />
+            </div>
+
+            <div style={{textAlign: 'center', justifyContent: 'center',fontSize: 20,marginTop: 50,  marginLeft: 40,}}>
+
+                    <Countdown date={Date.now() + this.state.ContestDuration} renderer={renderer} />
+            </div>
+
+
         </div>
 
+
+
       </div>
+
+
     )
   }
 }
