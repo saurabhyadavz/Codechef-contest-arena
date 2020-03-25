@@ -3,9 +3,7 @@ import Utils from './utils'
 import {
   Nav,
   NavLink,
-   Jumbotron,
-   Container
-
+   
 } from 'reactstrap'
 import Logout from './logoutButton'
 const url = Utils.config.urlBase

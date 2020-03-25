@@ -14,6 +14,8 @@
     "react-countdown": "^2.2.1",
     "react-dom": "^16.5.0",
     "react-scripts": "1.1.5",
+    "react-simple-popover": "^0.2.4",
+    "react-tiny-popover": "^4.0.0",
     "react-toastify": "^4.4.0",
     "reactstrap": "^6.4.0"
   },

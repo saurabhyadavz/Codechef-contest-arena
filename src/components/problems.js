@@ -1,27 +1,22 @@
 import React, { Component } from 'react'
 import {
   Table,
-  Nav,
-  NavItem,
-  NavLink,
-  TabContent,
-  TabPane,
-  Row,
-  Col, Button, Popover, PopoverHeader, PopoverBody,
+  
 } from 'reactstrap';
+
 import correct from '../img/correct.png'
 import compile from '../img/compile.png'
 import runtime from '../img/runtime.png'
 import timelimit from '../img/timelimit.png'
 import wrong from '../img/wrong.png'
-
 import Countdown from "react-countdown";
 import Utils from './utils'
+import './button.css'
 
 
 const url = Utils.config.urlBase
 const urlProblem = Utils.config.urlMain
-
+const userUrl=  Utils.config.urlMain
 class Problems extends Component {
   constructor (props) {
     super(props)
@@ -30,7 +25,7 @@ class Problems extends Component {
       contestName: '',
       problems: [],
       problemName:'',
-      ContestDuration:5000,
+      ContestDuration:9000,
       activity:[],
     }
   }
@@ -113,16 +108,47 @@ class Problems extends Component {
 
     var submissionlist=null
     if(this.state.activity && this.state.activity.length > 0){
-      submissionlist=this.state.activity.map(function(i){
+      submissionlist=this.state.activity.map(function(i)   {
 
         return(
 
           <tr key={i.id}>
             <td style={{fontSize:15}}>{i.date}</td>
-            <td style={{fontSize:15}}>{i.username}</td>
-            <td style={{fontSize:15}}>{i.problemCode}</td>
-            <td style={{fontSize:15}}> {i.result} </td>
-            <td style={{fontSize:15}}>{i.language}</td>
+            <td style={{fontSize:15}}><a target='_blank' href= {userUrl+'/users/'+i.username}>{i.username}</a></td>
+            <td style={{fontSize:15,fontWeight: '500'}}>{i.problemCode}</td>
+            <td style={{fontSize:15}}>
+              {(() => {
+
+                if (i.result === 'AC') {
+                  return (
+                    <img src={correct} style={{height:20,width:20}}/>
+                  )
+                }
+                else if(i.result ==='RE'){
+                  return(
+                    <img src={runtime} style={{height:20,width:20}}/>
+                  )
+                }
+                else if(i.result ==='WA'){
+                  return(
+                    <img src={wrong} style={{height:20,width:20}}/>
+                  )
+                }
+                else if(i.result ==='TLE'){
+                  return(
+                    <img src={timelimit} style={{height:20,width:20}}/>
+                  )
+                }
+                else{
+                  return(
+                    <img src={compile} style={{height:20,width:20}}/>
+                  )
+                }
+
+              })()}
+
+             </td>
+            <td style={{fontSize:12,fontWeight: '100'}}>{i.language}</td>
           </tr>
         )
       })
@@ -150,7 +176,7 @@ class Problems extends Component {
     var recentActivity = <div style={{justifyContent:'center',marginTop:10}}>
       <div>
         <p style={{marginTop:30}}>Recent Activity</p>
-        <Table striped bordered hover size="sm">
+        <Table bordered size="sm">
           <thead>
             <tr>
               <th style={{fontSize:15}}> Date </th>
@@ -165,10 +191,9 @@ class Problems extends Component {
           </tbody>
         </Table>
       </div>
-
-
-
     </div>
+
+
 
     return (
 
@@ -184,7 +209,9 @@ class Problems extends Component {
 
             <div style={{textAlign: 'center', justifyContent: 'center',fontSize: 20,marginTop: 50,  marginLeft: 40,}}>
                     <Countdown date={Date.now() + this.state.ContestDuration} renderer={renderer} />
-                      {recentActivity}
+                    <button  className="button button2" style={{marginTop:30}}  onClick={() => console.log("clock")}>Contest Ranklist</button>
+                    {recentActivity}
+
             </div>
 
 

@@ -37,9 +37,9 @@ componentDidMount(){
 
           }
         }
-        for(var i = 0; i < data.length; ++i) {
-          items.push(data[i].name);
-          mappeditems.set(data[i].name,data[i].code);
+        for(var k = 0; k < data.length; ++k) {
+          items.push(data[k].name);
+          mappeditems.set(data[k].name,data[k].code);
 
       }
 
@@ -68,8 +68,9 @@ componentDidMount(){
   }
 
   renderSuggestion(){
+
     const {suggestions} =this.state;
-    if(suggestions.length==0){
+    if(suggestions.length === 0){
       return null;
 
     }

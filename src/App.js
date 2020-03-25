@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Utils from './components/utils'
-import {Alert,Badge} from 'reactstrap'
 import './App.css'
 
 import AutoComplete from './components/AutoComplete'
@@ -20,7 +19,7 @@ class App extends Component {
     const self = this
     Utils.checkLocalStorage(function (err) {
       if (err) {
-        this.setState({ localStorageSupported: false })
+        self.setState({ localStorageSupported: false })
       }
     })
   }

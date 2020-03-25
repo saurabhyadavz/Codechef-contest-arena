@@ -44,7 +44,7 @@ function checkLogin (cxt, next) {
 
 Page('/', startHomeView)
 Page('/auth/codechef/callback', startOAuth2)
-Page('/problems/:code', startProblemsView)
+Page('/problems/:code',checkLogin, startProblemsView)
 Page.start()
 
 registerServiceWorker()
