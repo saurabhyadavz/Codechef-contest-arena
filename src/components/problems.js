@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {
   Table,
-  
+
 } from 'reactstrap';
 
 import correct from '../img/correct.png'
@@ -73,7 +73,7 @@ class Problems extends Component {
       } else {
 
         return (
-            <div style={{fontSize:'25px'}}>
+            <div style={{fontSize:22}}>
                 <div>
                   Contest Ends in
                 </div>
@@ -154,7 +154,7 @@ class Problems extends Component {
       })
     }
 
-    var problemsView = <div style={{ justifyContent: 'center', marginTop: 50 }}>
+    var problemsView = <div style={{ justifyContent: 'center', marginTop: 100 }}>
       <div>
         <Table bordered>
           <thead>
@@ -199,7 +199,7 @@ class Problems extends Component {
 
       <div>
 
-        <p style={{textAlign: 'center', justifyContent: 'center',fontSize: 20,marginTop:60,fontWeight:50}}>{this.state.contestName}</p>
+        <p style={{textAlign: 'center', justifyContent: 'center',fontSize: 21,marginTop:60,fontWeight:'400'}}><u>{this.state.contestName}</u></p>
         <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center' }}>
 
 
@@ -209,7 +209,7 @@ class Problems extends Component {
 
             <div style={{textAlign: 'center', justifyContent: 'center',fontSize: 20,marginTop: 50,  marginLeft: 40,}}>
                     <Countdown date={Date.now() + this.state.ContestDuration} renderer={renderer} />
-                    <button  className="button button2" style={{marginTop:30}}  onClick={() => console.log("clock")}>Contest Ranklist</button>
+                    <button  className="button button2" style={{marginTop:30}}  onClick={() =>  {Utils.moveTo(`/ranklist/${this.state.contestCode}`)  }}>Contest Ranklist</button>
                     {recentActivity}
 
             </div>

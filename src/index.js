@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker'
 import Page from 'page'
 import Problems from './components/problems'
 import Utils from './components/utils'
-
+import RankList from './components/ranklist'
 import Header from './components/header'
 
 
@@ -37,6 +37,13 @@ function startProblemsView (context) {
   )
 }
 
+function startRankList (context) {
+  var code= context.params.code
+  ReactDOM.render(<Header />, document.getElementById('header'))
+  ReactDOM.render(<RankList contestCode={code} />,document.getElementById('root'))
+
+}
+
 function checkLogin (cxt, next) {
   if (Utils.isLogged()) next()
   else Utils.moveTo('/')
@@ -44,7 +51,8 @@ function checkLogin (cxt, next) {
 
 Page('/', startHomeView)
 Page('/auth/codechef/callback', startOAuth2)
-Page('/problems/:code',checkLogin, startProblemsView)
+Page('/contest/:code',checkLogin, startProblemsView)
+Page('/ranklist/:code',checkLogin,startRankList)
 Page.start()
 
 registerServiceWorker()

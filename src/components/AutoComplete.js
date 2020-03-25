@@ -97,7 +97,7 @@ componentDidMount(){
         </div>
         <div>
 
-          <button  type="button" style={{marginTop:'40px'}} onClick={() =>  {Utils.moveTo(`/problems/${mappeditems.get(find)}`)  }}>Submit</button>
+          <button  type="button" style={{marginTop:'40px'}} onClick={() =>  {Utils.moveTo(`/contest/${mappeditems.get(find)}`)  }}>Submit</button>
 
         </div>
       </div>
