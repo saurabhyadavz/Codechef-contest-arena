@@ -8,7 +8,7 @@ import Problems from './components/problems'
 import Utils from './components/utils'
 import RankList from './components/ranklist'
 import Header from './components/header'
-
+import ProblemStatement from './components/problemstatement'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -43,7 +43,14 @@ function startRankList (context) {
   ReactDOM.render(<RankList contestCode={code} />,document.getElementById('root'))
 
 }
+function startProblemStatement(context) {
+  var code=context.params.code
+  var problemc=context.params.problemcode
 
+  ReactDOM.render(<Header />, document.getElementById('header'))
+  ReactDOM.render(<ProblemStatement contestCode={code} problemCode={problemc}/>,document.getElementById('root'))
+
+}
 function checkLogin (cxt, next) {
   if (Utils.isLogged()) next()
   else Utils.moveTo('/')
@@ -53,6 +60,7 @@ Page('/', startHomeView)
 Page('/auth/codechef/callback', startOAuth2)
 Page('/contest/:code',checkLogin, startProblemsView)
 Page('/ranklist/:code',checkLogin,startRankList)
+Page('/contests/:code/problems/:problemcode',startProblemStatement)
 Page.start()
 
 registerServiceWorker()

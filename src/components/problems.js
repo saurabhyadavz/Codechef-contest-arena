@@ -93,8 +93,8 @@ class Problems extends Component {
           <tr key={i.problemCode}>
             <td>
               <a
-                target='_blank'
-                href={urlProblem + '/' + i.contestCode + '/problems/' + i.problemCode}>
+                href={'/contests/'+i.contestCode+'/problems/'+i.problemCode}
+                >
                 {i.problemCode}
               </a>
             </td>
