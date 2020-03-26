@@ -79,12 +79,7 @@ class ProblemStatement extends Component {
         return (
 
           <tr >
-            <td style={{fontSize:15}}>
-
-            {(() => {
-              var ts = new Date(i.date);
-              return(ts.toString())
-              })()}
+            <td style={{fontSize:15}}>{i.date}
             </td>
             <td style={{fontSize:15}}><a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username}>{i.username}</a></td>
             <td style={{fontSize:15}}> {i.problemCode} </td>
