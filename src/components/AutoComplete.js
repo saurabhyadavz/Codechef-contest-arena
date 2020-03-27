@@ -17,6 +17,7 @@ export default class AutoComplete extends Component{
   }
 
 componentDidMount(){
+
   var token = window.localStorage.getItem('access_token')
   var url = `${Utils.config.urlBase}/contests?status=past&limit=100`
 
@@ -76,10 +77,12 @@ componentDidMount(){
     }
     return (
       <ul>
-        {suggestions.map((item) => <li onClick={() => this.suggestionSelected(item)}>{item}</li>)}
+        {suggestions.map((item) => <li  onClick={() => this.suggestionSelected(item)}>{item}</li>)}
       </ul>
     );
   }
+
+
 
 
 

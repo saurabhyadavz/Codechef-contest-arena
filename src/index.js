@@ -9,10 +9,15 @@ import Utils from './components/utils'
 import RankList from './components/ranklist'
 import Header from './components/header'
 import ProblemStatement from './components/problemstatement'
-
 import 'bootstrap/dist/css/bootstrap.css'
 
+
 function startHomeView () {
+  if( window.localStorage.getItem('refresh') === ''){
+    Utils.clearSession()
+    Utils.refreshToken()
+    window.localStorage.setItem('refresh',1)
+  }
   ReactDOM.render(<Header />, document.getElementById('header'))
   ReactDOM.render(<App />, document.getElementById('root'))
 }
