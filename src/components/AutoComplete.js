@@ -100,7 +100,15 @@ componentDidMount(){
         </div>
         <div>
 
-          <button className="button button1"  type="button" style={{marginTop:'40px'}} onClick={() =>  {Utils.moveTo(`/contest/${mappeditems.get(find)}`)  }}>Submit</button>
+          <button className="button button1"  type="button" style={{marginTop:'40px'}} onClick={() =>  {
+              if( find === '' || mappeditems.get(find) === undefined ){
+                Utils.moveTo('/')
+              }
+
+              else{
+              Utils.moveTo(`/contest/${mappeditems.get(find)}`)
+              }
+          }}>Submit</button>
 
         </div>
       </div>
