@@ -31,7 +31,7 @@ class Header extends Component {
         self.setState({ userInfo: data })
         window.localStorage.username = data.username
       } else {
-        console.log('Error hai: ', err)
+        console.log('Error', err)
       }
     })
   }

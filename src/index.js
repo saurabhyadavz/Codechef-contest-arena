@@ -13,10 +13,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 
 function startHomeView () {
-  if( window.localStorage.getItem('refresh') === ''){
+  var check =window.localStorage.getItem('refresh')
+  if( check && check !== ''){
     Utils.clearSession()
     Utils.refreshToken()
-    window.localStorage.setItem('refresh',1)
+    window.localStorage.setItem('refresh',100)
+
   }
   ReactDOM.render(<Header />, document.getElementById('header'))
   ReactDOM.render(<App />, document.getElementById('root'))
