@@ -2,7 +2,7 @@
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -14,10 +14,22 @@
 .button2 {
   background-color: white;
   color: black;
-  border: 2px solid #008CBA;
+  font-family: monospace;
+  border: 2px solid #FFA300;
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color:#FFA300;
+  color: white;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #0CF3A4;
+}
+
+.button1:hover {
+  background-color: #0CF3A4;
   color: white;
 }

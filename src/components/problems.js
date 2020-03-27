@@ -73,11 +73,11 @@ class Problems extends Component {
       } else {
 
         return (
-            <div style={{fontSize:22}}>
-                <div>
+            <div style={{fontSize:18}}>
+                <div style={{fontFamily: 'monospace'}}>
                   Contest Ends in
                 </div>
-                <div>
+                <div style={{fontSize:18}}>
                     <span>{hours}:{minutes}:{seconds}</span>
                 </div>
             </div>
@@ -175,7 +175,7 @@ class Problems extends Component {
 
     var recentActivity = <div style={{justifyContent:'center',marginTop:10}}>
       <div>
-        <p style={{marginTop:30}}>Recent Activity</p>
+        <p style={{marginTop:30,fontFamily: 'AvenirNext-UltraLightItalic'}}>Recent Activity</p>
         <Table bordered size="sm">
           <thead>
             <tr>
@@ -199,7 +199,7 @@ class Problems extends Component {
 
       <div>
 
-        <p style={{textAlign: 'center', justifyContent: 'center',fontSize: 21,marginTop:60,fontWeight:'400'}}><u>{this.state.contestName}</u></p>
+        <p style={{textAlign: 'center', justifyContent: 'center',fontSize: 20,marginTop:60,fontWeight:'400',fontFamily: 'BradleyHandITCTT-Bold'}}><u>{this.state.contestName}</u></p>
         <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center' }}>
 
 

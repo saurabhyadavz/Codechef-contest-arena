@@ -51,8 +51,62 @@ class RankList extends Component {
         return (
 
            <tr>
-                <td>{i.rank}</td>
-                <td>{i.username}</td>
+                <td >{i.rank}</td>
+                <td>
+                {(() => {
+                    if( i.rating <= 1399){
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#857E7A',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+                    else if( i.rating >=1400 && i.rating <=1599 ){
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#6BB946',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+                    else if( i.rating >=1600 && i.rating <=1799 ){
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#018BFE',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+                    else if( i.rating >=1800 && i.rating <=1999 ){
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#9D4CB3',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+                    else if( i.rating >=2000 && i.rating <=2199 ){
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#FFFC00',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+                    else if( i.rating >=2200 && i.rating <=2499 ){
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#E58A1A',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+                    else{
+                      return(
+                        <a target='_blank' href= {Utils.config.urlMain+'/users/'+i.username} style={{fontSize:20,color:'#E71918',fontWeight:'600'}}>
+                          {i.username}
+                        </a>
+                      )
+                    }
+
+                })()}
+
+                </td>
                 <td>{i.totalScore}</td>
                 <td>{i.totalTime}</td>
                 <td>{i.penalty}</td>
@@ -69,11 +123,11 @@ class RankList extends Component {
         <Table bordered>
           <thead>
             <tr>
-              <th>Rank</th>
-              <th >User name </th>
-              <th> Score </th>
-              <th> Total Time </th>
-              <th> Penalty</th>
+              <th>RANK</th>
+              <th >USER NAME </th>
+              <th> SCORE </th>
+              <th> TOTAL TIME </th>
+              <th> PENALTY</th>
             </tr>
           </thead>
           <tbody>

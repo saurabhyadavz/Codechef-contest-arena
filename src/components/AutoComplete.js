@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './AutoComplete.css'
 import Utils from './utils'
-
+import './button.css'
 var items=[];
 var mappeditems= new Map();
 export default class AutoComplete extends Component{
@@ -97,7 +97,7 @@ componentDidMount(){
         </div>
         <div>
 
-          <button  type="button" style={{marginTop:'40px'}} onClick={() =>  {Utils.moveTo(`/contest/${mappeditems.get(find)}`)  }}>Submit</button>
+          <button className="button button1"  type="button" style={{marginTop:'40px'}} onClick={() =>  {Utils.moveTo(`/contest/${mappeditems.get(find)}`)  }}>Submit</button>
 
         </div>
       </div>
