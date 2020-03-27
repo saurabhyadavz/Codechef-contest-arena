@@ -107,7 +107,15 @@ class RankList extends Component {
                 })()}
 
                 </td>
-                <td>{i.totalScore}</td>
+                <td>
+                    {(() => {
+                      var a=i.totalScore
+                      return (
+                        parseFloat(a)
+                      )
+
+                    })()}
+                </td>
                 <td>{i.totalTime}</td>
                 <td>
                   {(() => {
