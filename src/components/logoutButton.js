@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Utils from './utils'
 import { NavLink } from 'reactstrap'
+import './button.css'
 
 class LogoutButton extends Component {
   onClick () {
@@ -14,7 +15,7 @@ class LogoutButton extends Component {
   render () {
     return (
       <NavLink href='#' onClick={this.handleClick}>
-        Log out
+      <button className= "button logout">Logout</button>
       </NavLink>
     )
   }

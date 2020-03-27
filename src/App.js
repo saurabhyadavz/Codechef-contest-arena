@@ -19,7 +19,7 @@ class App extends Component {
     const self = this
     Utils.checkLocalStorage(function (err) {
       if (err) {
-      
+
         self.setState({ localStorageSupported: false })
       }
     })

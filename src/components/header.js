@@ -6,6 +6,7 @@ import {
 
 } from 'reactstrap'
 import Logout from './logoutButton'
+import './button.css'
 const url = Utils.config.urlBase
 
 class Header extends Component {
@@ -23,7 +24,7 @@ class Header extends Component {
   handleInfoUser = () => {
     const self = this
     const userURL = url + Utils.config.urlUser
-    
+
     var token = window.localStorage.getItem('access_token')
     Utils.getSecureRequest(userURL, token, function (err, data) {
       if (!err) {
@@ -45,20 +46,21 @@ class Header extends Component {
             Utils.config.clientID + '&state=xyz&redirect_uri=' + Utils.config.urlRedirect
             Utils.moveTo(callbackURL)
         }}
-      > Login
+      > <button className="button login">Login</button>
       </NavLink>
       : <Logout/ >
 
     let user = this.state.userInfo
-      ? <p className='text-success'
+      ? <p
         style={{ fontWeight: 'bold', margin: 0 }}>
-        {this.state.userInfo.username}
+        <button button className="button user">{this.state.userInfo.username}</button>
       </p>
-      : <p style={{color:'red'}}> Hey Anonymous </p>
+      :  <button className="button anonymous">Hey Anonymous</button>
+
 
     var header = <Nav>
-      <NavLink href='/'>Home</NavLink>
-      <NavLink href='#'>{user}</NavLink>
+      <NavLink  href='/'><button className="button home">Home</button></NavLink>
+      <NavLink target='__blank' href={Utils.config.urlMain+'/users/'+window.localStorage.username}>{user}</NavLink>
           {loginView}
 
     </Nav>

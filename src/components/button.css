@@ -33,3 +33,61 @@
   background-color: #0CF3A4;
   color: white;
 }
+/* user button */
+.user {
+  background-color:#1CB800;
+  color: white;
+
+
+}
+.user:hover {
+  background-color: white;
+  color: #1CB800;
+  border: 2px solid #1CB800;
+}
+
+/* Logout button */
+.logout {
+  background-color:#EBEBE9;
+  color: #373838;
+
+
+}
+.logout:hover {
+  background-color: #373838;
+  color: #EBEBE9;
+  border: 2px solid #EBEBE9;
+}
+
+/* Home button */
+.home {
+  background-color:#1C8CE3;
+  color: white;
+
+}
+.home:hover {
+  background-color: white;
+  color: #1C8CE3;
+  border: 2px solid #1C8CE3;
+
+}
+/* login button */
+.login {
+  background-color:#EBEBE9;
+  color: #373838;
+
+
+}
+.login:hover {
+  background-color: #373838;
+  color: #EBEBE9;
+  border: 2px solid #EBEBE9;
+}
+
+/* anonymous button */
+.anonymous {
+  background-color:#E0621F;
+  color:white;
+
+
+}
