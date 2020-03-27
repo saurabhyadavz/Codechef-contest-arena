@@ -31,7 +31,7 @@ class App extends Component {
 
 
     let home = <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <p style={{fontSize:'20px'}}>Please login</p>
+      <p style={{fontSize:'30px',marginTop:50,fontFamily:'Verdana'}}>Please login!</p>
     </div>
 
     if (Utils.isLogged()) {
