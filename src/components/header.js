@@ -23,8 +23,8 @@ class Header extends Component {
   handleInfoUser = () => {
     const self = this
     const userURL = url + Utils.config.urlUser
+    
     var token = window.localStorage.getItem('access_token')
-
     Utils.getSecureRequest(userURL, token, function (err, data) {
       if (!err) {
         self.setState({ userInfo: data })
@@ -43,7 +43,7 @@ class Header extends Component {
           Utils.clearSession()
           const callbackURL = url + Utils.config.urlAuthorize + '?response_type=code&client_id=' +
             Utils.config.clientID + '&state=xyz&redirect_uri=' + Utils.config.urlRedirect
-             Utils.moveTo(callbackURL)
+            Utils.moveTo(callbackURL)
         }}
       > Login
       </NavLink>

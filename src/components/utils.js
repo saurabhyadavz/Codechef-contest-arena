@@ -28,6 +28,7 @@ module.exports = {
   },
 
   refreshToken: function () {
+    console.log("I was here")
     const tokenURL = url + config.urlToken
     const data = {
       'grant_type': 'refresh_token',

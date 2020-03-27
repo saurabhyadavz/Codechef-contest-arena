@@ -109,7 +109,22 @@ class RankList extends Component {
                 </td>
                 <td>{i.totalScore}</td>
                 <td>{i.totalTime}</td>
-                <td>{i.penalty}</td>
+                <td>
+                  {(() => {
+                      if( i.penalty >0 ){
+                        return(
+                          <p style={{color:'red'}}> ({i.penalty})</p>
+                        )
+                      }
+                      else{
+                        return(
+                          <p style={{color:'green'}}> ({i.penalty})</p>
+                        )
+                      }
+
+                  })()}
+
+                </td>
             </tr>
 
         )
@@ -145,7 +160,12 @@ class RankList extends Component {
 
       <div>
         <p style={{textAlign: 'center', justifyContent: 'center',fontSize: 21,marginTop:40,fontWeight:'600'}}>
-          RANKS - <a href={Utils.config.urlMain+'/rankings/'+this.state.contestCode} target='_blank'>{this.state.contestCode}</a>
+          RANKS - <a href={Utils.config.urlMain+'/rankings/'+this.state.contestCode} target='_blank'>
+          {(() => {
+            var s=this.state.contestCode
+              return(s.toUpperCase())
+          })()}
+          </a>
          </p>
         <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center' }}>
 

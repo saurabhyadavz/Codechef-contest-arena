@@ -19,6 +19,7 @@ class App extends Component {
     const self = this
     Utils.checkLocalStorage(function (err) {
       if (err) {
+      
         self.setState({ localStorageSupported: false })
       }
     })
@@ -39,10 +40,8 @@ class App extends Component {
 
         <div className="App-Component">
 
-
-
               <AutoComplete />
-          
+
         </div>
       </div>
 
