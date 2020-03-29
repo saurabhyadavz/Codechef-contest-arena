@@ -24,7 +24,9 @@ class Header extends Component {
   handleInfoUser = () => {
     const self = this
     const userURL = url + Utils.config.urlUser
-
+    if(window.localStorage.getItem('expires_in') <= Date.now()){
+      Utils.refreshToken()
+    }
     var token = window.localStorage.getItem('access_token')
     Utils.getSecureRequest(userURL, token, function (err, data) {
       if (!err) {

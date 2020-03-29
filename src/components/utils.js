@@ -21,6 +21,7 @@ module.exports = {
       .then(res => {
         if (res.status !== 'OK') return cb(res.result)
         const tokens = res.result.data
+
         cb(null,tokens)
 
       })
@@ -28,7 +29,7 @@ module.exports = {
   },
 
   refreshToken: function () {
-    
+
     const tokenURL = url + config.urlToken
     const data = {
       'grant_type': 'refresh_token',
@@ -44,6 +45,7 @@ module.exports = {
           var data = res.result.data
           window.localStorage.setItem('access_token', data.access_token)
           window.localStorage.setItem('refresh_token', data.refresh_token)
+          window.localStorage.setItem('expires_in',Date.now()+data.expires_in*1000)
         }
       })
       .catch(err => {

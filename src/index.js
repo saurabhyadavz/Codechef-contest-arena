@@ -13,15 +13,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 
 function startHomeView () {
-  var check =window.localStorage.getItem('refresh')
-  if( check && check !== ''){
-    Utils.clearSession()
+  if(window.localStorage.getItem('expires_in') <= Date.now()){
     Utils.refreshToken()
-    window.localStorage.setItem('refresh',100)
-
   }
   ReactDOM.render(<Header />, document.getElementById('header'))
   ReactDOM.render(<App />, document.getElementById('root'))
+
 }
 
 function startOAuth2 (context) {
@@ -29,8 +26,10 @@ function startOAuth2 (context) {
 
   Utils.getTokenFirstTime(code, function (err, data) {
     if (!err) {
+      console.log({data});
       window.localStorage.setItem('access_token', data.access_token)
       window.localStorage.setItem('refresh_token', data.refresh_token)
+      window.localStorage.setItem('expires_in',data.expires_in*1000+Date.now())
       Utils.moveTo('/')
     } else {
       window.alert(err)
