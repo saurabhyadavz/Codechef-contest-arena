@@ -74,25 +74,9 @@ module.exports = {
       })
   },
 
-  getRequest: function (url, next) {
-    // TODO: Fix credentials, only share with the backend
-    fetch(url, { credentials: 'include' })
-      .then(res => res.json())
-      .then(res => next(null, res))
-      .catch(err => next(err))
-  },
 
-  postRequest: function (url, data, next) {
-    // TODO: Fix credentials, only share with the backend
-    fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include'
-    }).then(res => res.json())
-      .then(res => next(null, res))
-      .catch(err => next(err))
-  },
+
+
 
   checkLocalStorage: function (cb) {
     function check () {
