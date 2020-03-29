@@ -55,14 +55,18 @@ class Header extends Component {
     let user = this.state.userInfo
       ? <p
         style={{ fontWeight: 'bold', margin: 0 }}>
-        <button button className="button user">{this.state.userInfo.username}</button>
+          <NavLink target='__blank' href={Utils.config.urlMain+'/users/'+window.localStorage.username}>
+            <button button className="button user">{this.state.userInfo.username}</button>
+          </NavLink>
       </p>
-      :  <button className="button anonymous">Hey Anonymous</button>
+      :    <NavLink  href='#'>
+            <button className="button anonymous">Hey Anonymous</button>
+          </NavLink>
 
 
     var header = <Nav>
       <NavLink  href='/'><button className="button home">Home</button></NavLink>
-      <NavLink target='__blank' href={Utils.config.urlMain+'/users/'+window.localStorage.username}>{user}</NavLink>
+          {user}
           {loginView}
 
     </Nav>
