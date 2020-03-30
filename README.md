@@ -50,3 +50,9 @@ Rank-list             |
 ### Difficulties faced during development
 - I was never much introduce to development field(except some basics of DJANGO), so it took 4-5 days in learning the concepts of React, authorization with Oauth2 and working with API. Making Login with CodeChef Credentials (using the CodeChef API OAuth) was one of the difficult part. 
 
+##### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
+
+
+
+
+<p align="center"> Made with <img src="https://img.icons8.com/color/15/000000/hearts.png"/> by <a href="https://github.com/saurabhshadow">Saurabh Yadav</a></p>
