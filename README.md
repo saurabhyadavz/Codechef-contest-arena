@@ -32,4 +32,17 @@ This app was developed to participate in **CodeChef Internship Assessment - Roun
   - Ranklist - Shows the ranklist of the selected contest.
   - Timer - Contest run for a period of given duration and once the contest gets over it automatically moves to the home page.
   
- 
+### Application Screenshots
+
+Login        |  After login
+:-------------------------:|:-------------------------:
+![left](./img/login.png) | ![right](./img/after_login.png)
+
+Contest Page        |   Problem Page
+:-------------------------:|:-------------------------:
+![left](./img/contest.png) | ![right](./img/problem.png)
+
+Rank-list             | 
+:-------------------------:|
+![left](./img/ranklist.png) | 
+
