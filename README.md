@@ -21,10 +21,11 @@ This app was developed to participate in **CodeChef Internship Assessment - Roun
 ### How to run the app?
 - The application was deployed on a [public url](https://modest-carson-21aa1e.netlify.com/) with the help Netlify's cloud.
 - To test the app locally:
+  - `git clone https://github.com/saurabhshadow/Codechef-contest-arena.git`
   - Update **config-dev.json**.
-  - **`cd Codechef-contest-arena`**
-  - run **`npm install`**
-  - run **`npm start`**
+  - `cd Codechef-contest-arena`
+  - run `npm install`
+  - run `npm start`
 
 - **Functions Description**
   - Login with Codechef - You can login using your Codechef's account which uses the CodeChef API OAuth.
