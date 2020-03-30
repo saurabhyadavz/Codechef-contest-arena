@@ -1,8 +1,6 @@
 <h1 align="center">Unacknowledged-Codechef-Contest-Arena</h1>
 <p align="center">
-  
-   *Never back down*
-   
+  <strong>Never back down</strong>
 </p>
 
 ## About
@@ -51,7 +49,7 @@ Rank-list             |
 ### Difficulties faced during development
 - I was never much introduce to development field(except some basics of DJANGO), so it took 4-5 days in learning the concepts of React, authorization with Oauth2 and working with API. Making Login with CodeChef Credentials (using the CodeChef API OAuth) was one of the difficult part. 
 
-##### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
+### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
 
 
 
