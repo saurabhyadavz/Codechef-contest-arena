@@ -1,6 +1,7 @@
 <h1 align="center">Unacknowledged-Codechef-Contest-Arena</h1>
 <p align="center">
-  Never back down
+  <img src="https://img.icons8.com/ios-filled/100/000000/circled-c.png"/><br/>
+   Never back down
 </p>
 
 ## About
@@ -25,5 +26,10 @@ This app was developed to participate in **CodeChef Internship Assessment - Roun
   - run **`npm install`**
   - run **`npm start`**
 
-
-
+- **Functions Description**
+  - Login with Codechef - You can login using your Codechef's account which uses the CodeChef API OAuth.
+  - Choose Contest - You can choose any past contest and submit it to enter.
+  - Ranklist - Shows the ranklist of the selected contest.
+  - Timer - Contest run for a period of given duration and once the contest gets over it automatically moves to the home page.
+  
+ 
