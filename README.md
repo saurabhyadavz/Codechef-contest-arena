@@ -19,8 +19,8 @@ This app was developed to participate in **CodeChef Internship Assessment - Roun
 - The application was deployed on a [public url](https://modest-carson-21aa1e.netlify.com/) with the help Netlify's cloud.
 - To test the app locally:
   - `git clone https://github.com/saurabhshadow/Codechef-contest-arena.git`
-  - Update **config-dev.json**.
   - `cd Codechef-contest-arena`
+  - update **config-dev.json**.
   - run `npm install`
   - run `npm start`
 
