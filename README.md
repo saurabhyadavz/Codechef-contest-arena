@@ -1,7 +1,8 @@
 <h1 align="center">Unacknowledged-Codechef-Contest-Arena</h1>
 <p align="center">
-  <img src="https://img.icons8.com/ios-filled/100/000000/circled-c.png"/><br/>
-   Never back down
+  
+   *Never back down*
+   
 </p>
 
 ## About
@@ -54,5 +55,4 @@ Rank-list             |
 
 
 
-
-<p align="center"> Made with <img src="https://img.icons8.com/color/15/000000/hearts.png"/> by <a href="https://github.com/saurabhshadow">Saurabh Yadav</a></p>
+<p align="center"> Made with ❤ by <a href="https://github.com/saurabhshadow">Saurabh Yadav</a></p>
