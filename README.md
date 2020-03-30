@@ -1,7 +1,5 @@
 <h1 align="center">Codechef-Contest-Arena</h1>
-<p align="center">
-  <strong>Never back down</strong>
-</p>
+
 
 ## About
 This app was developed to participate in **CodeChef Internship Assessment - Round 2**. The app is designed to simulate Codechef's past contest. Here are the main functionality of app:
@@ -48,6 +46,11 @@ Rank-list             |
 
 ### Difficulties faced during development
 - I was never much introduce to development field(except some basics of DJANGO), so it took 4-5 days in learning the concepts of React, authorization with Oauth2 and working with API. Making Login with CodeChef Credentials (using the CodeChef API OAuth) was one of the difficult part. 
+
+### Made using
+- React
+- Javascript
+- Codechef API
 
 ### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
 
