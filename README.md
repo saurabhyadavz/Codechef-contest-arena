@@ -46,3 +46,6 @@ Rank-list             |
 :-------------------------:|
 ![left](./img/ranklist.png) | 
 
+### Difficulties faced during development
+- I was never much introduce to development field(except some basics of DJANGO), so it took 4-5 days in learning the concepts of React, authorization with Oauth2 and working with API. Making Login with CodeChef Credentials (using the CodeChef API OAuth) was one of the difficult part. 
+
