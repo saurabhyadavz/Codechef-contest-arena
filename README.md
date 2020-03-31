@@ -69,6 +69,7 @@ Rank-list             |
 
 ### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
 
+### Presentation link can be found [here](https://docs.google.com/presentation/d/1Lcwb02CqKe4awo-OXr0YdQVAP8c1HnwznR4k7neBSF8/edit?usp=sharing)
 
 
 <p align="center"> Made with ❤ by <a href="https://github.com/saurabhshadow">Saurabh Yadav</a></p>
