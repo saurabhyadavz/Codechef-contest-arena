@@ -29,7 +29,19 @@ This app was developed to participate in **CodeChef Internship Assessment - Roun
   - Choose Contest - You can choose any past contest and submit it to enter.
   - Ranklist - Shows the ranklist of the selected contest.
   - Timer - Contest run for a period of given duration and once the contest gets over it automatically moves to the home page.
-  
+ 
+ 
+ 
+ 
+### App Architecture
+The application uses 2 components:
+- Frontend
+- Codechef API
+ 
+ 
+ 
+ 
+ 
 ### Application Screenshots
 
 Login        |  After login
