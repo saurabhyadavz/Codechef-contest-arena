@@ -59,10 +59,12 @@ Rank-list             |
 ### Difficulties faced during development
 - I was never much introduce to development field(except some basics of DJANGO), so it took 4-5 days in learning the concepts of React, authorization with Oauth2 and working with API. Making Login with CodeChef Credentials (using the CodeChef API OAuth) was one of the difficult part. 
 
-### Made using:-
+### Technologies used:-
 - React
 - Javascript
 - Codechef API
+- Bootstrap v3
+- Reactstrap
 
 ### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
 
