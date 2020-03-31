@@ -26,7 +26,7 @@ This app was developed to participate in **CodeChef Internship Assessment - Roun
 
 - **Functions Description**
   - Login with Codechef - You can login using your Codechef's account which uses the CodeChef API OAuth.
-  - Choose Contest - You can choose any past contest and submit it to enter.
+  - Choose Contest - You can choose any contest whether by its name or code. The autocomplete box will accept a Contest Code or a Contest Name, that will take you to the contest page, which consists of list of clickable problems, recent submission, timer and rank list
   - Ranklist - Shows the ranklist of the selected contest.
   - Timer - Contest run for a period of given duration and once the contest gets over it automatically moves to the home page.
  
