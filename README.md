@@ -38,7 +38,7 @@ The application uses 2 components:
 - Frontend
 - Codechef API
  
- 
+![Architecture](./img/arc.png)
  
  
  
