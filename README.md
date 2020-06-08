@@ -2,7 +2,7 @@
 
 
 ## About
-This app was developed to participate in **CodeChef Internship Assessment - Round 2**. The app is designed to simulate Codechef's past contest. Here are the main functionality of app:
+The app is designed to simulate **Codechef's past contest**. Here are the main functionality of app:
 - You can login using your Codechef's account(using the CodeChef API OAuth2)
 - Once you logged in there is an auto-complete box that will accept a Contest Code or a Contest Name, that will take you to the contest problem page
 - Contest page have functionality like:
@@ -69,7 +69,6 @@ Rank-list             |
 
 #### Public URL of application can be found [here](https://modest-carson-21aa1e.netlify.com/)
 
-#### Presentation link can be found [here](https://docs.google.com/presentation/d/1Lcwb02CqKe4awo-OXr0YdQVAP8c1HnwznR4k7neBSF8/edit?usp=sharing)
 
 
 <p align="center"> Made with ❤ by <a href="https://github.com/saurabhshadow">Saurabh Yadav</a></p>
